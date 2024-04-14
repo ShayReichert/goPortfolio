@@ -6,9 +6,12 @@ import (
 )
 
 func main() {
-	app := echo.New()
+	e := echo.New()
 
-	userHandler := handler.UserHandler{}
-	app.GET("/user", userHandler.HandleUserShow)
-	app.Start(":3000")
+	e.GET("/", handler.NewRepo().Home)
+
+	// serve static files
+	e.Static("/static", "assets")
+
+	e.Start(":3000")
 }
