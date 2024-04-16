@@ -11,12 +11,14 @@ $(window).load(function () {
 	$(".show-project").on('click', function () {
 		let targetId = $(this).data('target');
 		$("#" + targetId).addClass('project-panel-show');
+		$(".section-white.portfolio-padding").addClass('shrink');
 	})
 
 
 	$(".close-project").on('click', function () {
 		let targetId = $(this).data('target');
 		$("#"+ targetId).removeClass('project-panel-show')
+		$(".section-white.portfolio-padding").removeClass('shrink');
 	})
 
 	/* ========================================================== */

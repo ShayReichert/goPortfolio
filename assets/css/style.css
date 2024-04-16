@@ -2063,3 +2063,12 @@ only screen and (max-width: 800px) {
 	opacity: 1;
 	transform: translate(0, 75px);
 }
+
+.portfolio {
+	width: 100%;
+	transition: width 700ms ease-in-out;
+}
+
+.shrink {
+	width: 50%;
+}
