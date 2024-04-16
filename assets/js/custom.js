@@ -8,18 +8,34 @@ $(window).load(function () {
 	/* ========================================================== */
 
 
-	$(".show-project").on('click', function () {
+	$(".show-project").on('click', async function () {
 		let targetId = $(this).data('target');
-		$("#" + targetId).addClass('project-panel-show');
+		let el = $("#project");
+		let content = '';
+		const response = await fetch('/projects?id=' + targetId + '', { method: "GET" });
+		if (response.ok) {
+			content = await response.text();
+		}
+		if (el.hasClass('project-panel-show')) {
+			el.html(content);
+			closeEvent();
+		}
+		else {
+			el.addClass('project-panel-show');
+			el.html(content);
+			closeEvent();
+		}
 		$(".section-white.portfolio-padding").addClass('shrink');
 	})
 
 
-	$(".close-project").on('click', function () {
-		let targetId = $(this).data('target');
-		$("#"+ targetId).removeClass('project-panel-show')
-		$(".section-white.portfolio-padding").removeClass('shrink');
-	})
+	function closeEvent() {
+		$(".close-project").on('click', function () {
+			$("#project").removeClass('project-panel-show')
+			$(".section-white.portfolio-padding").removeClass('shrink');
+		})
+	}
+
 
 	/* ========================================================== */
 	/*   Hide Responsive Navigation On-Click                      */

@@ -9,6 +9,7 @@ func main() {
 	e := echo.New()
 
 	e.GET("/", handler.NewRepo().Home)
+	e.GET("/projects", handler.NewRepo().Projects)
 
 	// serve static files
 	e.Static("/static", "assets")
