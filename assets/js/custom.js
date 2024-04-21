@@ -12,7 +12,7 @@ $(window).load(function () {
 		let targetId = $(this).data('target');
 		let el = $("#project");
 		let content = '';
-		const response = await fetch('/projects?id=' + targetId + '', { method: "GET" });
+		const response = await fetch('/projects?id=' + targetId, { method: "GET" });
 		if (response.ok) {
 			content = await response.text();
 		}
