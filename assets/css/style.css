@@ -1782,6 +1782,13 @@ btn:hover {
 	border: 1px solid #34b1c4 !important;
 }
 
+#navbar-collapse-02.collapsing {
+  position: relative !important;
+  height: auto !important;
+  overflow: visible !important;
+  transition: none !important;
+}
+
 /* ----- 4. Fun Facts ----- */
 .fun-facts-wrapper {
 	width: 100%;
