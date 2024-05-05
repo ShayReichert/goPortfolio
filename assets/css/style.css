@@ -2059,7 +2059,7 @@ only screen and (max-width: 800px) {
 
 .project-panel {
 	position: fixed;
-	top: 0;
+	top: 2px;
 	right: 0;
 	transform: translate(100%, 75px);
 	transition: opacity 700ms ease-in, transform 700ms ease-in-out;

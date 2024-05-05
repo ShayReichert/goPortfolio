@@ -50,10 +50,6 @@ $(window).load(function () {
 	/*   Navigation Color                                         */
 	/* ========================================================== */
 
-	$('#navbar-collapse-02').onePageNav({
-		filter: ':not(.external)'
-	});
-
 
 	/* ========================================================== */
 	/*   SmoothScroll                                             */

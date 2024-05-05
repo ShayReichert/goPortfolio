@@ -1,7 +1,5 @@
 package templates
 
-import "github.com/Alexis3386/goPortfolio/templates/project"
-
 templ portfolio() {
 	<section class="section-white portfolio-padding portfolio" id="portfolio">
 		<!--begin container-->
@@ -22,43 +20,49 @@ templ portfolio() {
 			<!--begin row-->
 			<div class="row">
 				<!--begin col-sm-4-->
-				<div class="col-sm-4 wow fadeIn" data-wow-delay="0.15s">
+				<div class="col-sm-6 wow fadeIn" data-wow-delay="0.15s">
 					<!--begin popup-gallery-->
 					<div id="project-1" class="show-project" data-target="1">
-						<img src="http://placehold.it/800x550" class="width-100" alt="pic"/>
+						<img src="static/images/blog1.png" class="width-100" alt="pic"/>
+						<div>
+							<h5>Blogs PHP</h5>
+							<h6>Développement Web</h6>
+						</div>
 					</div>
 					<!--end popup-gallery-->
 				</div>
 				<!--end col-sm-4-->
 				<!--begin col-sm-4-->
-				<div class="col-sm-4 wow fadeIn" data-wow-delay="0.30s">
+				<div class="col-sm-6 wow fadeIn" data-wow-delay="0.30s">
 					<!--begin popup-gallery-->
 					<div id="project-2" class="show-project" data-target="2">
 						<img src="http://placehold.it/800x550" class="width-100" alt="pic"/>
 					</div>
-					<div class="project-panel" id="project-panel-2">
-						@project.Project2()
-					</div>
 					<!--end popup-gallery-->
 				</div>
-				<!--end col-sm-4-->
-				<!--begin col-sm-4-->
-				<div class="col-sm-4 wow fadeIn" data-wow-delay="0.45s">
+			</div>
+			<div class="row">
+				<div class="col-sm-6 wow fadeIn" data-wow-delay="0.45s">
 					<!--begin popup-gallery-->
 					<div class="">
 						<img src="http://placehold.it/800x550" class="width-100" alt="pic"/>
 					</div>
 					<!--end popup-gallery-->
 				</div>
-				<div class="project-panel" id="project">
+				<div class="col-sm-6 wow fadeIn" data-wow-delay="0.60s">
+					<!--begin popup-gallery-->
+					<div class="">
+						<img src="http://placehold.it/800x550" class="width-100" alt="pic"/>
+					</div>
+					<!--end popup-gallery-->
 				</div>
-				<!--end col-sm-4-->
 			</div>
-			<!--end row-->
-			<!--begin row-->
+			<!--end col-sm-4-->
 			<div class="row">
 				<!--begin col-sm-4-->
-				<div class="col-sm-4 wow fadeIn" data-wow-delay="0.60s">
+				<!--end col-sm-4-->
+				<!--begin col-sm-4-->
+				<div class="col-sm-6 wow fadeIn" data-wow-delay="0.75s">
 					<!--begin popup-gallery-->
 					<div class="">
 						<img src="http://placehold.it/800x550" class="width-100" alt="pic"/>
@@ -67,16 +71,7 @@ templ portfolio() {
 				</div>
 				<!--end col-sm-4-->
 				<!--begin col-sm-4-->
-				<div class="col-sm-4 wow fadeIn" data-wow-delay="0.75s">
-					<!--begin popup-gallery-->
-					<div class="">
-						<img src="http://placehold.it/800x550" class="width-100" alt="pic"/>
-					</div>
-					<!--end popup-gallery-->
-				</div>
-				<!--end col-sm-4-->
-				<!--begin col-sm-4-->
-				<div class="col-sm-4 wow fadeIn" data-wow-delay="1s">
+				<div class="col-sm-6 wow fadeIn" data-wow-delay="1s">
 					<!--begin popup-gallery-->
 					<div class="">
 						<img src="http://placehold.it/800x550" class="width-100" alt="pic"/>
@@ -85,8 +80,11 @@ templ portfolio() {
 				</div>
 				<!--end col-sm-4-->
 			</div>
-			<!--end row-->
 		</div>
+		<div id="project" class="project-panel"></div>
+		<!--end row-->
+		<!--begin row-->
+		<!--end row-->
 		<!--end container-->
 	</section>
 }
